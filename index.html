@@ -11,31 +11,34 @@
 
 
 <div id= "tab" role="navigation">
-   <button id="button-1" class="tablinks" onclick="changeColor(event)">Dialer</button> 
-   <button id="button-2" class="tablinks" onclick="changeColor(event)">Contact List</button>
-   <button id="button-3" class="tablinks" onclick="changeColor(event)">Add Contact</button> 
-   <button id="button-4" class="tablinks" onclick="changeColor(event)">
+   <button id="button-1" class="tablinks" onclick="changeColor(event)" accesskey="d">Dialer</button> 
+   <button id="button-2" class="tablinks" onclick="changeColor(event)" accesskey="c">Contact List</button>
+   <button id="button-3" class="tablinks" onclick="changeColor(event)" accesskey="a">Add Contact</button> 
+   <button id="button-4" class="tablinks" onclick="changeColor(event)" accesskey="h">
     Help</button> 
 </div>
    <br />
 
 
 <div id = "init">
-  <div id="tab-1" class="tabcontent">
-  		<h1>Dialer</h1>
+  <div id="tab-1" class="tabcontent" style="width: 200px;">
+<!--   		<h1>Dialer</h1> -->
 <!-- 		<form class ="keys"> -->
 			<div class="keys">
-     <!--  <label> Dialing Number </label> -->
-			<input type="text" id= "inputBox" placeholder = "0" name= "Dialing Number"></output> <br />
+        <div>
+      <h1 for="inputBox" id="dialer"> Dialer </h1> <br />
+      <input type="text" id= "inputBox" placeholder = "0" name= "Dialing Number" accesskey="i"></input> 
+    </div>
+<br />
 
-			<button onclick="addInput(1);">1</button> <button onclick="addInput(2);">2</button> <button onclick="addInput(3);">3</button> <br />
+			<button onclick="addInput(1);" accesskey="1">1</button> <button onclick="addInput(2);" accesskey="2">2</button> <button onclick="addInput(3);" accesskey="3">3</button> <br />
 
-			<button onclick="addInput(4);">4</button> <button onclick="addInput(5);">5</button> <button onclick="addInput(6);">6</button> <br />
+			<button onclick="addInput(4);" accesskey="4">4</button> <button onclick="addInput(5);" accesskey="5">5</button> <button onclick="addInput(6);" accesskey="6">6</button> <br />
 
-			<button onclick="addInput(7);">7</button> <button onclick="addInput(8);">8</button> <button onclick="addInput(9);">9</button> <br />
+			<button onclick="addInput(7);" accesskey="7">7</button> <button onclick="addInput(8);" accesskey="8">8</button> <button onclick="addInput(9);" accesskey="9">9</button> <br />
 
-			<button onclick="addInput('*');">*</button> <button onclick="addInput(0);">0</button> <button onclick="addInput('#');">#</button> <br />
-			<button onclick="addInput(-2);">Dial</button> <button onclick="addInput(-1);">Clear</button> <br />
+			<button onclick="addInput('*');" accesskey="*">*</button> <button onclick="addInput(0);" accesskey="0">0</button> <button onclick="addInput('#');" accesskey="#">#</button> <br />
+			<button onclick="addInput(-2);" accesskey="s">Dial</button> <button onclick="addInput(-1);" accesskey="e">Clear</button> <br />
 <!-- 		</form> -->
 </div>
   </div>
@@ -115,26 +118,72 @@
 
   <div id="tab-4" class="tabcontent">
       <div>
-      A list of accessibility features
+      <label for="table-features">A list of accessibility features</label>
 
-      <ul style="list-style-type:circle;">
-        <li>Tab Control</li>
-        <li>Keyboard shortcuts for Dialer and Tabs</li>
-        <li>Accessible Table</li>
-        <li>Help Tab</li>
-        <li>Captioned Images</li>
-         <li>ARIA landmark roles </li>
-         <li>ARIA live regions</li>
+      <ul id="table-features" style="list-style-type:circle;">
+        <li>Tab Control: Help users who rely on the keyboard to navigation, as well as screen reader users</li> 
+        <li>Keyboard shortcuts for Dialer and Tabs: Improve user experience</li>
+        <li>Accessible Table: Help screen readers to navigate formatted tables </li>
+        <li>Help Tab: Provide user manual-like information </li>
+        <li>Captioned Images: Primarily useful for screen reader users</li>
+       <li>ARIA landmark roles: Help assistive tech know how to navigate through the app </li>
+       <li>ARIA live regions: Provide access to dynamic web applications</li>
       </ul>
 
 
-      a table of keyboard shortcuts
+      <label for="table-shortcuts">A table of keyboard shortcuts implemented</label>
+    <table id="shortcuts" aria-live="polite">
+    <tr>
+      <th>Accesskeys</th>
+      <th>Description</th> 
+    </tr>
+    <tr>
+      <td>0-9, *, #</td>
+      <td>The keyboard shortcuts for number 0-9, symbols * or #</td> 
+    </tr>
+
+    <tr>
+      <td>s[sumbit]</td>
+      <td>The keyboard shortcuts for Dialer page's 'Dial' button</td> 
+    </tr>
+
+    <tr>
+      <td>e[exit]</td>
+      <td>The keyboard shortcuts for Dialer page's 'Clear' button</td> 
+    </tr>
+
+
+    <tr>
+      <td>d</td>
+      <td>The keyboard shortcuts for Tab 'Dialer'</td> 
+    </tr>
+    <tr>
+      <td>c</td>
+      <td>The keyboard shortcuts for Tab 'Contact List'</td> 
+    </tr>
+    <tr>
+      <td>a</td>
+      <td>The keyboard shortcuts for Tab 'Add Contact'</td> 
+    </tr>
+    <tr>
+      <td>h</td>
+      <td>The keyboard shortcuts for Tab 'Help'</td> 
+    </tr>
+
+
+
+
+</table>
+
+
+
       <br />
 
-      cite the image sources
-      <a href="http://love-netflix.wikia.com/wiki/Gus">Jim Smith Image Source</a>
-      <a href="http://love-netflix.wikia.com/wiki/Mickey"> Eve Jackson Image Source </a>
-
+      <label for="citation">Citation of the images used</label>
+      <ul id="citation" >
+        <li><a href="http://love-netflix.wikia.com/wiki/Gus">Jim Smith Image Source</a></li>
+        <li><a href="http://love-netflix.wikia.com/wiki/Mickey"> Eve Jackson Image Source </a></li>
+    </ul>
     </div>
   </div>
 
