@@ -1,5 +1,5 @@
 
-<html>
+<html lang="en">
   <head>
   	<link rel="stylesheet" href="phone.css">
 
@@ -25,7 +25,7 @@
   		<h1>Dialer</h1>
 <!-- 		<form class ="keys"> -->
 			<div class="keys">
-			<input type="text" id= "inputBox" placeholder = "0" ></output> <br />
+			<input type="text" id= "inputBox" placeholder = "0" name= "Dialing Number"></output> <br />
 
 			<button onclick="addInput(1);">1</button> <button onclick="addInput(2);">2</button> <button onclick="addInput(3);">3</button> <br />
 
@@ -74,7 +74,7 @@
       <td>Smith</td> 
       <td>Jill.Smith@colorado.edu</td>
       <td>5206789810</td>
-      <td><img src="Jill-Smith.png" alt="Jill Smith Image" longdesc="This is the portrait of Jill Smith"  width= "100px"/></td>
+      <td><img src="Jill-Smith.png" alt="This is the image of Jill Smith who you are calling to" longdesc="http://love-netflix.wikia.com/wiki/Gus"  width= "100px"/></td>
 
     </tr>
     <tr>
@@ -82,7 +82,7 @@
       <td>Jackson</td> 
       <td>Eve.Jackson@colorado.edu</td>
       <td>6206726789</td>
-      <td><img src="Eve-Jackson.png" alt="Eve Jackson Image" longdesc="This is the portrait of Eve Jackson" width= "100px"/></td>
+      <td><img src="Eve-Jackson.png" alt="This is your friend Eve Jackson who you are calling to" longdesc="http://love-netflix.wikia.com/wiki/Mickey" width= "100px"/></td>
 
     </tr>
 </table>
@@ -94,11 +94,11 @@
    <div id="tab-3" class="tabcontent">
   	<h1> Add Contact </h1>
   	Name <br />
-  	<input type= "text" placeholder="Jane Smith"> <br />
+  	<input type= "text" name="Name" placeholder="Jane Smith"> <br />
   	Phone number <br />
-  	<input type ="text" placeholder="123-456-7890"> <br />
+  	<input type ="text" name="Phone Number" placeholder="123-456-7890"> <br />
   	Email address <br />
-  	<input type="text" placeholder="jane.smith@colorado.edu"> <br />
+  	<input type="text" name= "Email Address" placeholder="jane.smith@colorado.edu"> <br />
 
   	<button class="add-button"> Add Contact</button>
   	<button class="clear-button"> Clear</button> <br>
